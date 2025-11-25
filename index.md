@@ -5,6 +5,8 @@ title: Endorphin.es Plus 3 + DOREMIDI MPC-10
 
 # Endorphin.es Plus 3 + DOREMIDI MPC-10
 
+<a href="https://www.buymeacoffee.com/kylebeckgit" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 **Some background on why I bought the DOREMIDI for anyone who is considering going down the same path**:
 
 I already had a PLUS 3 to use with my hardware that has expression inputs (Analog Heat+FX and Osmose in my case). I loved the form factor and the hardware feels great. I didn’t have a portable hardware solution to control my software synthesizers (or other hardware that acecpts midi but not expression) in the same way, so I wanted to see if there was a solution out there to bridge this gap and let me use the PLUS 3 with more stuff. The DOREMIDI got a shout out on one of Looppop’s youtube videos & I couldn’t find much else on the market that did what it did at a low pricepoint. One challenge is I didn’t see any real world experiences of people setting up the PLUS 3 with DOREMIDI and what that process looked like, so I knew there would likely be some kinks getting things set up (sure enough, it took a good little chunk of time to get it working). 
@@ -55,7 +57,7 @@ Use this for controlling DAW parameters (e.g., CC1 → last touched in Bitwig).
 Smooth, continuous values with no stepping or interference.
 
 # PEDAL 2 (Switch) — Momentary Button
-Use this for toggling on and off. It will hold the maximum midi 
+Use this for toggling on and off. The on position will hold the maximum midi value set for PEDAL 2. 
 
 | **Setting**        | **Value**                                         |
 |:------------------:|:-------------------------------------------------:|
