@@ -1,4 +1,5 @@
 ---
+# Rebuild trigger
 layout: default
 title: Endorphin.es Plus 3 + DOREMIDI MPC-10
 ---
