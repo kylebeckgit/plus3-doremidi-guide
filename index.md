@@ -6,7 +6,6 @@ title: Endorphin.es Plus 3 + DOREMIDI MPC-10
 
 
 
-# Endorphin.es Plus 3 + DOREMIDI MPC-10
 
 [← Back to Home](https://kylebeckgit.github.io/)
 
