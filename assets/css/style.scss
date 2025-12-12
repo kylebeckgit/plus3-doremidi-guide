@@ -1,23 +1,48 @@
----
----
-@import "{{ site.theme }}";
+--- --- @import "{{ site.theme }}";
+
+/* Theme Variables - Copied from main site for consistency */
+:root {
+    --bg-color: #f9f4e6;
+    /* Lighter Sepia (Pearl/Cream) */
+    --text-color: #333;
+    --link-color: #10b981;
+    --header-bg: #10b981;
+    --header-border: #047857;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1e1e1e;
+    --text-color: #f4ecd8;
+    --link-color: #10b981;
+    --header-bg: linear-gradient(to right, #064e3b, #065f46);
+    --header-border: #022c22;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Force headers and links to use variables */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+    color: var(--text-color) !important;
+}
 
 a {
-    color: #10b981 !important;
+    color: var(--link-color) !important;
 }
 
 a:hover {
-    color: #059669 !important;
+    text-decoration: underline;
 }
 
-#header_wrap {
-    background: linear-gradient(to right, #064e3b, #065f46) !important;
-    border-bottom: 1px solid #047857 !important;
-}
-
-#forkme_banner {
-    background: url('https://cdn.simpleicons.org/github/000000') #e0e0e0 no-repeat 95% 50% !important;
-    background-size: 40px 40px !important;
-    color: #212121 !important;
-    border-bottom: 1px solid #111 !important;
-}
+/* Minimal Theme Specific Overrides */
+/* Header removed in custom layout, so no header overrides needed */

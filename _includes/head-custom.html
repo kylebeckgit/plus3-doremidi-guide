@@ -177,3 +177,32 @@
     });
   });
 </script>
+
+<style>
+  /* Slate Theme Overrides */
+  /* Remove default background image and use our variables */
+  #header {
+    background-image: none !important;
+    background-color: var(--header-bg) !important;
+  }
+
+  /* Ensure text color in header is legible */
+  #header h1,
+  #header h2 {
+    color: #ffffff !important;
+    /* Always white on the dark green header */
+  }
+
+  /* Fix main content background */
+  .main-content {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+  }
+
+  /* Fix code block colors if needed */
+  pre,
+  code {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: inherit;
+  }
+</style>
