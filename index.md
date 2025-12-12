@@ -10,9 +10,6 @@ title: Endorphin.es Plus 3 + DOREMIDI MPC-10
 
 [← Back to Home](https://kylebeckgit.github.io/)
 
-<div style="text-align: center;">
-<a href="https://buymeacoffee.com/kylebeck" target="_blank" style="display: inline-block;"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-</div>
 
 **Some background on why I bought the DOREMIDI for anyone who is considering going down the same path**:
 
@@ -85,3 +82,7 @@ Use this for toggling on and off. The on position will hold the maximum midi val
 This will get you to the point where the fader is a smooth increase / decrease, and the momentary button is a maximum value on / off toggle. You can customize things like the CC number, midi channel, min / max values etc. until your heart is content, maybe you even want to change the behavior so it works less like the PLUS 3 does in the hardware world with expression inputs. 
 
 Thanks for reading! I hope this was helpful for anyone who was struggling getting the PLUS 3 working in their software. If you have any questions or run into issues I *might* be able to help given I struggled through some challenges myself getting everything operational.
+
+<div style="text-align: center;">
+<a href="https://buymeacoffee.com/kylebeck" target="_blank" style="display: inline-block;"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+</div>
