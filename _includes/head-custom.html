@@ -1,0 +1,179 @@
+<style>
+  /* Theme Variables */
+  :root {
+    --bg-color: #f9f4e6;
+    /* Lighter Sepia (Pearl/Cream) */
+    --text-color: #333;
+    --link-color: #10b981;
+    /* Updated Banner to match link color flatly */
+    --header-bg: #10b981;
+    --header-border: #047857;
+  }
+
+  [data-theme="dark"] {
+    --bg-color: #1e1e1e;
+    --text-color: #f4ecd8;
+    --link-color: #10b981;
+    --header-bg: linear-gradient(to right, #064e3b, #065f46);
+    --header-border: #022c22;
+  }
+
+  body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* Force headers and links to use variables */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  strong,
+  b {
+    color: var(--text-color) !important;
+  }
+
+  a {
+    color: var(--link-color) !important;
+  }
+
+  /* Minimal Theme Switch */
+  .theme-switch-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+
+  .theme-switch-wrapper:hover {
+    opacity: 1;
+  }
+
+  .theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 44px;
+  }
+
+  .theme-switch input {
+    display: none;
+  }
+
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .slider:before {
+    background-color: #fff;
+    bottom: 3px;
+    content: "";
+    height: 18px;
+    left: 3px;
+    position: absolute;
+    transition: .4s;
+    width: 18px;
+    border-radius: 50%;
+  }
+
+  input:checked+.slider {
+    background-color: #10b981;
+  }
+
+  input:checked+.slider:before {
+    transform: translateX(20px);
+  }
+
+  /* Contact Link - injected via JS but styled here */
+  #custom-contact-link {
+    font-size: 0.85rem;
+    padding-top: 10px;
+    opacity: 0.8;
+    margin-top: 15px;
+    display: block;
+  }
+
+  #custom-contact-link a {
+    text-decoration: none;
+    border-bottom: 1px dotted currentColor;
+    color: var(--link-color) !important;
+  }
+
+  #custom-contact-link a:hover {
+    opacity: 1;
+    border-bottom: 1px solid currentColor;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // 1. Inject Contact Link into Header
+    if (!document.getElementById('custom-contact-link')) {
+      const header = document.querySelector('header');
+      const target = header || document.querySelector('.wrapper') || document.body;
+
+      const contactDiv = document.createElement('div');
+      contactDiv.id = 'custom-contact-link';
+      // Removed prefix as requested
+      contactDiv.innerHTML = '<a href="mailto:kyle@kyle-beck.com">kyle@kyle-beck.com</a>';
+
+      target.appendChild(contactDiv);
+    }
+
+    // 2. Setup Theme Toggle (Minimal Switch)
+    if (document.getElementById('theme-toggle-checkbox')) return;
+
+    // Create Switch HTML
+    const wrapper = document.createElement('div');
+    wrapper.className = 'theme-switch-wrapper';
+    wrapper.title = 'Toggle Dark Mode';
+    wrapper.innerHTML = `
+      <label class="theme-switch" for="theme-toggle-checkbox">
+        <input type="checkbox" id="theme-toggle-checkbox" />
+        <div class="slider"></div>
+      </label>
+    `;
+    document.body.appendChild(wrapper);
+
+    const toggleCheckbox = document.getElementById('theme-toggle-checkbox');
+    const root = document.documentElement;
+
+    // Check saved theme
+    const savedTheme = localStorage.getItem('theme');
+
+    // Default logic
+    if (savedTheme === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+      toggleCheckbox.checked = true;
+    } else if (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      // System default logic if needed
+    }
+
+    toggleCheckbox.addEventListener('change', function (e) {
+      if (e.target.checked) {
+        root.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        root.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  });
+</script>
