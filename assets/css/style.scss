@@ -1,1 +1,27 @@
 --- --- @import "{{ site.theme }}";
+
+/* Custom Styling for Inline Title (since Banner is removed) */
+
+#project_title {
+    color: #fff;
+    /* Ensure title is white on dark background */
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+#project_tagline {
+    color: #ccc;
+    /* Slightly dimmed description */
+    margin-top: 0;
+    margin-bottom: 2em;
+    font-weight: normal;
+    font-size: 1.25em;
+}
+
+/* Ensure container allows content to flow comfortably */
+#main_content_wrap {
+    border: none;
+    /* Remove any border that might expect a header above it */
+}
