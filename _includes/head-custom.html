@@ -120,6 +120,57 @@
     opacity: 1;
     border-bottom: 1px solid currentColor;
   }
+
+  /* Professional Table Styling */
+  table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+    background-color: transparent;
+    font-size: 0.95em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  th,
+  td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  th {
+    background-color: var(--header-bg);
+    color: #ffffff !important;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  /* Ensure header text remains white in dark mode if header-bg is gradient */
+  [data-theme="dark"] th {
+    color: #fff !important;
+  }
+
+  tr:last-of-type td {
+    border-bottom: none;
+    /* Hide bottom border for last row */
+  }
+
+  /* Zebra Striping */
+  tbody tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  [data-theme="dark"] tbody tr:nth-of-type(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+
+  [data-theme="dark"] td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
 </style>
 
 <script>
