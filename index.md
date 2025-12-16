@@ -82,6 +82,3 @@ This will get you to the point where the fader is a smooth increase / decrease, 
 
 Thanks for reading! I hope this was helpful for anyone who was struggling getting the PLUS 3 working in their software. If you have any questions or run into issues I *might* be able to help given I struggled through some challenges myself getting everything operational.
 
-<div style="text-align: center;">
-<a href="https://buymeacoffee.com/kylebeck" target="_blank" style="display: inline-block;"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-</div>
